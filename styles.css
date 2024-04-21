@@ -1,5 +1,5 @@
 :root {
-    --main-color: #FFA303git;
+    --main-color: #FFA303;
     --body-bg: #181616;
     --box-bg: #221f1f;
     --text-color: #ffffff;
@@ -59,7 +59,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 99;
-    background-color: #000000;
+    background-color: #ED1C55;
 }
 
 .nav {
@@ -250,9 +250,10 @@ a.movie-item:hover {
 }
 
 .item-content-title {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    line-height: 3rem;
     font-weight: 900;
+    color: #ED1C55;
 }
 
 .movie-infos {
@@ -383,7 +384,7 @@ a.movie-item:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 5px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -398,7 +399,7 @@ a.movie-item:hover {
 }
 
 .movie-item-title {
-    color: var(--text-color);
+    color: #ED1C55;
     font-size: 1.5rem;
     position: relative;
     font-weight: 700;
@@ -451,6 +452,7 @@ a.movie-item:hover {
 
 .pricing-price {
     font-weight: 700;
+    color: #ED1C55;
 }
 
 .pricing-price span {
