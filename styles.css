@@ -1,5 +1,6 @@
 :root {
     --main-color: #FFA303;
+    --secondary-color: #ED1C55;
     --body-bg: #181616;
     --box-bg: #221f1f;
     --text-color: #ffffff;
@@ -36,6 +37,10 @@ img {
 
 .main-color {
     color: var(--main-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
 }
 
 .container {
@@ -283,9 +288,9 @@ a.movie-item:hover {
 }
 
 .item-content-description {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-top: var(--space-top);
-    line-height: 1.5rem;
+    line-height: 1.4rem;
 }
 
 .item-action {
@@ -406,6 +411,11 @@ a.movie-item:hover {
 }
 .section {
     padding-top: 80px;
+}
+
+.fondo-manito {
+    background-image: url("images/fondo-manito.png");
+    background-color: #ED1C55;
 }
 
 .section-header {
