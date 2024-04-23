@@ -215,7 +215,7 @@ img {
     top: 0;
     margin-top: 60px;
     right: 0;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 80%;
     justify-content: center;
     align-items: flex-end;
