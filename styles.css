@@ -381,11 +381,20 @@ img {
 .item-content-description {
   font-size: 1.3vw;
   margin-top: var(--space-top);
-  line-height: 1.4rem;
+  line-height: 1.3vw;
 }
 
 .item-action {
   margin-top: var(--space-top);
+}
+
+@media (max-width: 920px) {
+  .item-content-description {
+    display: none;
+  }
+  .item-action {
+    display: none;
+  }  
 }
 /* -----END SLIDE----- */
 
@@ -478,7 +487,7 @@ img {
 
 .conferencia-item-title {
   color: #ed1c55;
-  font-size: 1.5rem;
+  font-size: 3vw;
   position: relative;
   font-weight: 700;
 }
