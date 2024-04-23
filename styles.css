@@ -106,7 +106,7 @@ img {
 
 .nav-menu a.btn:hover,
 a.logo:hover,
-a.movie-item:hover {
+a.conferencia-item:hover {
   color: unset;
 }
 
@@ -261,29 +261,29 @@ a.movie-item:hover {
   color: #ed1c55;
 }
 
-.movie-infos {
+.conferencia-infos {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-top: calc(var(--space-top) / 2);
 }
 
-.movie-info {
+.conferencia-info {
   display: flex;
   align-items: center;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.movie-info span {
+.conferencia-info span {
   margin-left: 5px;
 }
 
-.movie-info i {
+.conferencia-info i {
   color: var(--main-color);
 }
 
-.movie-info ~ .movie-info {
+.conferencia-info ~ .conferencia-info {
   margin-left: 5px;
 }
 
@@ -364,7 +364,7 @@ a.movie-item:hover {
   opacity: 1;
 }
 
-.movie-item {
+.conferencia-item {
   display: block;
   position: relative;
   overflow: hidden;
@@ -372,7 +372,7 @@ a.movie-item:hover {
   cursor: pointer;
 }
 
-.movie-item img {
+.conferencia-item img {
   position: absolute;
   top: 0;
   left: 0;
@@ -380,11 +380,11 @@ a.movie-item:hover {
   transition: transform 0.3s linear;
 }
 
-.movie-item:hover img {
+.conferencia-item:hover img {
   transform: scale(1.2);
 }
 
-.movie-item-content {
+.conferencia-item-content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -393,7 +393,7 @@ a.movie-item:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.movie-item-content::before {
+.conferencia-item-content::before {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -403,7 +403,7 @@ a.movie-item:hover {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-.movie-item-title {
+.conferencia-item-title {
   color: #ed1c55;
   font-size: 1.5rem;
   position: relative;
@@ -570,7 +570,7 @@ footer .content {
   border: 1px solid #ed1c55; /* Cambiamos el estilo del borde a sólido y establecemos el color rojo */
 }
 
-.logo {
+.logo-formulario {
   display: block;
   margin: auto;
   text-align: center;

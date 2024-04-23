@@ -18,7 +18,7 @@ $(document).ready(() => {
         autoplayHoverPause: true
     })
 
-    $('#top-movies-slide').owlCarousel({
+    $('#top-conferencias-slide').owlCarousel({
         items: 2,
         dots: false,
         loop: true,
@@ -37,7 +37,7 @@ $(document).ready(() => {
         }
     })
 
-    $('.movies-slide').owlCarousel({
+    $('.conferencias-slide').owlCarousel({
         items: 2,
         dots: false,
         nav:true,
