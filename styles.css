@@ -487,7 +487,7 @@ img {
 
 .conferencia-item-title {
   color: #ed1c55;
-  font-size: 3vw;
+  font-size: 2vw;
   position: relative;
   font-weight: 700;
 }
@@ -729,5 +729,9 @@ footer .content {
 
   .btn-primary {
     width: 100%; /* Ancho del botón al 100% para pantallas pequeñas */
+  }
+
+  .conferencia-item-title {
+    font-size: 3vw;
   }
 }
