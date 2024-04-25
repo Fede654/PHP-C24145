@@ -1,464 +1,477 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        EventearLA
-    </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventearLA</title>
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
     <!-- BOX ICONS -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- APP CSS -->
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-     <!-- NAV SECTION-->
-     <div class="nav-wrapper">
-        <div class="container">
-            <div class="nav">
-                <a href="./index.html" class="logo">
-                    <img src="./images/logo-eventearla.png" alt="logo-eventearla" height="40px">
-                </a>
-                <input id="menu-toggle" type="checkbox" />
-                <label class='nav-menu-button-container' for="menu-toggle">
-                    <div class='menu-button'></div>
-                </label>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Agenda</a></li>
-                    <li><a href="#">Sponsors</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li>
-                        <a href="pages/registro.html" class="btn btn-hover">
-                            <span>Registrarse</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <body>
+    <!-- NAV SECTION-->
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="nav">
+          <a href="#" class="logo">
+            <img
+              src="./images/logo-eventearla.png"
+              alt="logo-eventearla"
+              height="40px"
+            />
+          </a>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="nav-menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li>
+              <a href="pages/login.html" class="btn btn-hover">
+                <span>Iniciar sesión</span>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
     <!-- END NAV SECTION-->
 
     <!-- SLIDE SECTION -->
     <div class="slide-section">
-        <!-- HERO SLIDE -->
-        <div class="hero-slide">
-            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
-                <!-- SLIDE ITEM -->
-                <div class="hero-slide-item">
-                    <img src="./images/banner-evento.png" alt="">
-                    <div class="overlay"></div>
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                El Evento más #nerd de Ciencia y Tecnología llega a Latam
-                            </div>
-                            <div class="conferencia-infos top-down delay-2">
-                                <div class="conferencia-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>Charlas certificadas</span>
-                                </div>
-                                <div class="conferencia-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>20 mins c/u</span>
-                                </div>
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Llega la 3ra edición de EventearLA 101, uno de los eventos más grandes de la región que ya es un clásico, con 3 días de charlas, talleres y actividades ¡100% gratis!
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                <a href="pages/registro.html" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Registrate</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+      <!-- HERO SLIDE -->
+      <div class="hero-slide">
+        <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/banner-evento.png" alt="" />
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  El Evento más #nerd de Ciencia y Tecnología llega a Latam
                 </div>
-                <!-- END SLIDE ITEM -->
-                <!-- SLIDE ITEM -->
-                <div class="hero-slide-item">
-                    <img src="./images/banner-evento2.png" alt="">
-                    <div class="overlay"></div>
-                    <div class="hero-slide-item-content">
-                        <div class="item-content-wraper">
-                            <div class="item-content-title top-down">
-                                101 expositores de Latam via stream o presencial 
-                            </div>
-                            <div class="conferencia-infos top-down delay-2">
-                                <div class="conferencia-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>Charlas certificadas</span>
-                                </div>
-                                <div class="conferencia-info">
-                                    <i class="bx bxs-time"></i>
-                                    <span>20 mins c/u</span>
-                                </div>
-                            </div>
-                            <div class="item-content-description top-down delay-4">
-                                Llega la 3ra edición de EventearLA 101, uno de los eventos más grandes de la región que ya es un clásico, con 3 días de charlas, talleres y actividades ¡100% gratis!
-                            </div>
-                            <div class="item-action top-down delay-6">
-                                <a href="pages/registro.html" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Registrate</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="conferencia-infos top-down delay-2">
+                  <div class="conferencia-info">
+                    <i class="bx bxs-star"></i>
+                    <span>Charlas certificadas</span>
+                  </div>
+                  <div class="conferencia-info">
+                    <i class="bx bxs-time"></i>
+                    <span>20 mins c/u</span>
+                  </div>
                 </div>
-                <!-- END SLIDE ITEM -->                
+                <div class="item-content-description top-down delay-4">
+                  Llega la 3ra edición de EventearLA 101, uno de los eventos más
+                  grandes de la región que ya es un clásico, con 3 días de
+                  charlas, talleres y actividades ¡100% gratis!
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="pages/registro.html" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Registrate</span>
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/banner-evento2.png" alt="" />
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  101 expositores de Latam via stream o presencial
+                </div>
+                <div class="conferencia-infos top-down delay-2">
+                  <div class="conferencia-info">
+                    <i class="bx bxs-star"></i>
+                    <span>Charlas certificadas</span>
+                  </div>
+                  <div class="conferencia-info">
+                    <i class="bx bxs-time"></i>
+                    <span>20 mins c/u</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4">
+                  Llega la 3ra edición de EventearLA 101, uno de los eventos más
+                  grandes de la región que ya es un clásico, con 3 días de
+                  charlas, talleres y actividades ¡100% gratis!
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="pages/registro.html" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Registrate</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
         </div>
+      </div>
     </div>
     <!-- END SLIDE SECTION -->
 
     <!-- CONFERENCIAS SECTION -->
     <div class="section fondo-manito">
-        <div class="container">
-            <div class="section-header">
-                Speakers
+      <div class="container">
+        <div class="section-header">Speakers</div>
+        <div class="conferencias-slide carousel-nav-center owl-carousel">
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-max-contieri.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">
+                ¡Conviértete en un Centauro del Código Limpio!
+              </div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
             </div>
-            <div class="conferencias-slide carousel-nav-center owl-carousel">
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-max-contieri.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            ¡Conviértete en un Centauro del Código Limpio!
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-john-osorio.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            10 tips para elevar el rendimiento de sus sitios web
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-carla-florida.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            From zero to AI engineer
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-nano-vazquez.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            Construyendo Bajo Presión: cómo armar el primer MVP de tu startup en 2024
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-max-contieri.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            ¡Conviértete en un Centauro del Código Limpio!
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
-                <!-- CONFERENCIA ITEM -->
-                <a href="pages/detalle.html" class="conferencia-item">
-                    <img src="./images/speaker-john-osorio.jpg" alt="">
-                    <div class="conferencia-item-content">
-                        <div class="conferencia-item-title">
-                            10 tips para elevar el rendimiento de sus sitios web
-                        </div>
-                        <div class="conferencia-infos">
-                            <div class="conferencia-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <i class="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>HD</span>
-                            </div>
-                            <div class="conferencia-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- END CONFERENCIA ITEM -->
+          </a>
+          <!-- END CONFERENCIA ITEM -->
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-john-osorio.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">
+                10 tips para elevar el rendimiento de sus sitios web
+              </div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
             </div>
+          </a>
+          <!-- END CONFERENCIA ITEM -->
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-carla-florida.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">From zero to AI engineer</div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- END CONFERENCIA ITEM -->
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-nano-vazquez.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">
+                Construyendo Bajo Presión: cómo armar el primer MVP de tu
+                startup en 2024
+              </div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- END CONFERENCIA ITEM -->
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-max-contieri.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">
+                ¡Conviértete en un Centauro del Código Limpio!
+              </div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- END CONFERENCIA ITEM -->
+          <!-- CONFERENCIA ITEM -->
+          <a href="#" class="conferencia-item">
+            <img src="./images/speaker-john-osorio.jpg" alt="" />
+            <div class="conferencia-item-content">
+              <div class="conferencia-item-title">
+                10 tips para elevar el rendimiento de sus sitios web
+              </div>
+              <div class="conferencia-infos">
+                <div class="conferencia-info">
+                  <i class="bx bxs-star"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="conferencia-info">
+                  <i class="bx bxs-time"></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>HD</span>
+                </div>
+                <div class="conferencia-info">
+                  <span>16+</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- END CONFERENCIA ITEM -->
         </div>
+      </div>
     </div>
     <!-- END CONFERENCIAS SECTION -->
 
     <!-- PRICING SECTION -->
     <div class="section">
-        <div class="container">
-            <div class="pricing">
-                <div class="pricing-header">
-                    Sumate como <span class="secondary-color">Sponsor</span>
+      <div class="container">
+        <div class="pricing">
+          <div class="pricing-header">
+            Sumate como <span class="secondary-color">Sponsor</span>
+          </div>
+          <div class="pricing-list">
+            <div class="row">
+              <div class="col-4 col-md-12 col-sm-12">
+                <div class="pricing-box">
+                  <div class="pricing-box-header">
+                    <div class="pricing-name">Basico</div>
+                    <div class="pricing-price">Gratis</div>
+                  </div>
+                  <div class="pricing-box-content">
+                    <p>Presencia en la web</p>
+                    <p><del>Logo animado en las charlas</del></p>
+                    <p><del>Stand personalizado</del></p>
+                    <p><del>Logo en streaming</del></p>
+                  </div>
+                  <div class="pricing-box-action">
+                    <a href="pages/registro.html" class="btn btn-hover">
+                      <span>Registrate ahora</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="pricing-list">
-                    <div class="row">
-                        <div class="col-4 col-md-12 col-sm-12">
-                            <div class="pricing-box">
-                                <div class="pricing-box-header">
-                                    <div class="pricing-name">
-                                        Basico
-                                    </div>
-                                    <div class="pricing-price">
-                                        Gratis
-                                    </div>
-                                </div>
-                                <div class="pricing-box-content">
-                                    <p>Presencia en la web</p>
-                                    <p><del>Logo animado en las charlas</del></p>
-                                    <p><del>Stand personalizado</del></p>
-                                    <p><del>Logo en streaming</del></p>
-                                </div>
-                                <div class="pricing-box-action">
-                                    <a href="pages/registro.html" class="btn btn-hover">
-                                        <span>Registrate ahora</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-12 col-sm-12">
-                            <div class="pricing-box hightlight">
-                                <div class="pricing-box-header">
-                                    <div class="pricing-name">
-                                        Premium
-                                    </div>
-                                    <div class="pricing-price">
-                                        $35.99 <span>/mes</span>
-                                    </div>
-                                </div>
-                                <div class="pricing-box-content">
-                                    <p>Presencia en la web</p>
-                                    <p>Logo animado en las charlas</p>
-                                    <p><del>Stand personalizado</del></p>
-                                    <p><del>Logo en streaming</del></p>
-                                </div>
-                                <div class="pricing-box-action">
-                                    <a href="pages/registro.html" class="btn btn-hover">
-                                        <span>Registrate ahora</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-12 col-sm-12">
-                            <div class="pricing-box">
-                                <div class="pricing-box-header">
-                                    <div class="pricing-name">
-                                        VIP
-                                    </div>
-                                    <div class="pricing-price">
-                                        $65.99 <span>/mes</span>
-                                    </div>
-                                </div>
-                                <div class="pricing-box-content">
-                                    <p>Presencia en la web</p>
-                                    <p>Logo animado en las charlas</p>
-                                    <p>Stand personalizado</p>
-                                    <p>Logo en streaming</p>
-                                </div>
-                                <div class="pricing-box-action">
-                                    <a href="pages/registro.html" class="btn btn-hover">
-                                        <span>Registrate ahora</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-4 col-md-12 col-sm-12">
+                <div class="pricing-box hightlight">
+                  <div class="pricing-box-header">
+                    <div class="pricing-name">Premium</div>
+                    <div class="pricing-price">$35.99 <span>/mes</span></div>
+                  </div>
+                  <div class="pricing-box-content">
+                    <p>Presencia en la web</p>
+                    <p>Logo animado en las charlas</p>
+                    <p><del>Stand personalizado</del></p>
+                    <p><del>Logo en streaming</del></p>
+                  </div>
+                  <div class="pricing-box-action">
+                    <a href="pages/registro.html" class="btn btn-hover">
+                      <span>Registrate ahora</span>
+                    </a>
+                  </div>
                 </div>
+              </div>
+              <div class="col-4 col-md-12 col-sm-12">
+                <div class="pricing-box">
+                  <div class="pricing-box-header">
+                    <div class="pricing-name">VIP</div>
+                    <div class="pricing-price">$65.99 <span>/mes</span></div>
+                  </div>
+                  <div class="pricing-box-content">
+                    <p>Presencia en la web</p>
+                    <p>Logo animado en las charlas</p>
+                    <p>Stand personalizado</p>
+                    <p>Logo en streaming</p>
+                  </div>
+                  <div class="pricing-box-action">
+                    <a href="pages/registro.html" class="btn btn-hover">
+                      <span>Registrate ahora</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- END PRICING SECTION -->
-    
+
     <!-- FOOTER SECTION -->
     <footer class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-md-6 col-sm-12">
-                    <div class="content">
-                        <a href="#" class="logo">
-                            <img src="images/logo-eventearla.png" alt="logo">
-                        </a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa exercitationem officiis non error illum minima iusto et. Dolores, quibusdam?
-                        </p>
-                        <div class="social-list">
-                            <a href="#" class="social-item">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="#" class="social-item">
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                            <a href="#" class="social-item">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-md-6 col-sm-12">
-                    <div class="row">
-                        <div class="col-3 col-md-6 col-sm-6">
-                            <div class="content">
-                                <p><b>El evento</b></p>
-                                <ul class="footer-menu">
-                                    <li><a href="#">Agenda</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li><a href="#">Sponsors</a></li>
-                                    <li><a href="#">Contacto</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-6 col-sm-6">
-                            <div class="content">
-                                <ul class="footer-menu">
-                                    <li><b><a href="pages/login.html">Ingresa</a></b></li>
-                                    <li><a href="pages/registro.html">Registrarse</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-6 col-sm-6">
-                            <div class="content">
-                                <p><b>Download app</b></p>
-                                <ul class="footer-menu">
-                                    <li>
-                                        <a href="#">
-                                            <img src="./images/google-play.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./images/app-store.png" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-md-6 col-sm-12">
+            <div class="content">
+              <a href="#" class="logo">
+                <img src="images/logo-eventearla.png" alt="logo" />
+              </a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa
+                exercitationem officiis non error illum minima iusto et.
+                Dolores, quibusdam?
+              </p>
+              <div class="social-list">
+                <a href="#" class="social-item">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="social-item">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="social-item">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="col-8 col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <p><b>El evento</b></p>
+                  <ul class="footer-menu">
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Speakers</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="#">Contacto</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <ul class="footer-menu">
+                    <li>
+                      <b><a href="pages/login.html">Ingresa</a></b>
+                    </li>
+                    <li><a href="pages/registro.html">Registrarse</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <p><b>Download app</b></p>
+                  <ul class="footer-menu">
+                    <li>
+                      <a href="#">
+                        <img src="./images/google-play.png" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./images/app-store.png" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- END FOOTER SECTION -->
-    
+
     <!-- COPYRIGHT SECTION -->
     <div class="copyright">
-        <small> All Right Reserved &copy; Copyright - Grupo 6 - PHP.</small>
+      <small> All Right Reserved &copy; Copyright - Grupo 6 - PHP.</small>
     </div>
     <!-- END COPYRIGHT SECTION -->
 
     <!-- SCRIPTS SECTION -->
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <!-- OWL CAROUSEL -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
     <!-- APP SCRIPT -->
     <script src="index.js"></script>
     <!-- END SCRIPTS SECTION -->
-
-</body>
+  </body>
 </html>

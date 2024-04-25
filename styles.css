@@ -53,7 +53,6 @@ img {
   padding-top: 80px;
 }
 
-
 /* -----NAVIGATION MENU SECTION----- */
 .nav-wrapper {
   position: fixed;
@@ -85,7 +84,7 @@ img {
 }
 .logo:hover {
   /* font-size: 2rem; */
-  transform: rotate(5deg) scale(1.2,1.2) translate(5px, 10px);
+  transform: rotate(5deg) scale(1.2, 1.2) translate(5px, 10px);
 }
 
 .nav-menu {
@@ -178,12 +177,12 @@ img {
 }
 
 .menu-button::before {
-  content: '';
+  content: "";
   margin-top: -8px;
 }
 
 .menu-button::after {
-  content: '';
+  content: "";
   margin-top: 8px;
 }
 
@@ -202,11 +201,10 @@ img {
 }
 
 @media (max-width: 920px) {
-
   .logo:hover {
     transform: none;
   }
-  
+
   .nav-menu-button-container {
     display: flex;
   }
@@ -394,10 +392,9 @@ img {
   }
   .item-action {
     display: none;
-  }  
+  }
 }
 /* -----END SLIDE----- */
-
 
 /* -----CONFERENCIAS SECTION----- */
 .fondo-manito {
@@ -431,7 +428,7 @@ img {
 }
 @media screen and (min-width: 1000px) {
   .conferencia-info {
-     font-size: 0.96rem;
+    font-size: 0.96rem;
   }
 }
 .conferencia-info span {
@@ -493,7 +490,6 @@ img {
 }
 /* -----END CONFERENCIAS----- */
 
-
 /* -----PRICING SECTION----- */
 .pricing-header {
   margin-bottom: 30px;
@@ -546,7 +542,6 @@ img {
   margin-top: 60px;
 }
 /* -----END PRICING----- */
-
 
 /* -----FOOTER SECTION----- */
 footer.section {
@@ -620,119 +615,200 @@ footer .content {
 }
 /* -----END FOOTER----- */
 
+/* ESTILOS PARA LA PAGINA DE REGISTRO E INICIO DE SESION */
 
-
-/* ESTILOS PARA LA PAGINA DE REGISTRO E INICIO DE SESION*/
-
+/* Contenedor principal del formulario */
 .form-container {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  width: 600px;
+  width: 600px; /* Ancho fijo del formulario */
   margin: auto;
-  transition: border-color 0.3s; /* Transición para el cambio de color del borde */
   box-sizing: border-box;
 }
 
-/* Estilo para el borde rojo al escribir */
-.form-control:focus {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid #ed1c55; /* Cambiamos el estilo del borde a sólido y establecemos el color rojo */
-}
-
-.logo-formulario {
-  display: block;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  display: center;
-}
-
+/* Etiqueta del formulario */
 .form-label {
   color: #ffffff;
   font-weight: bold;
-  margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
+/* Estilo de campos de entrada */
 .form-control {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 5px;
-  color: #ffffff;
+  color: var(--text-color) !important;
   padding: 10px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
+/* Estilo de campo de entrada cuando enfocado */
 .form-control:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ed1c55;
 }
 
+/* Estilo del texto de marcador de posición del campo de entrada */
+.form-control::placeholder {
+  color: #ffffff87;
+  font-size: 15px;
+}
+
+/* Estilo para select */
 .form-select {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 5px;
   color: #ffffff;
   padding: 10px;
-  width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
-  margin-bottom: 20px; /* Aumentamos el margen inferior */
+  width: 100%;
 }
 
-.form-check-label {
-  color: #ffffff;
-  margin-left: auto;
+/* Estilo para el texto de marcador de posición del select */
+.form-select::placeholder {
+  color: #ffffff87;
+  font-size: 15px;
 }
 
+/* Estilo de select cuando enfocado */
+.form-select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ed1c55;
+}
+
+/* Contenedor flexible personalizado */
+.custom-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de casilla de verificación personalizada */
+.custom-checkbox {
+  flex-grow: 1;
+  padding: 20px;
+  align-self: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Estilo de casilla de verificación cuando está marcada */
+.form-check-input:checked {
+  background-color: #ed1c55;
+  border-color: #ed1c55;
+}
+
+/* Contenedor de enlace personalizado */
+.custom-link-wrapper {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+/* Botón primario */
 .btn-primary {
   background-color: #ed1c55;
   border: none;
   border-radius: 5px;
   color: #ffffff;
-  padding: 10px 30px;
-  cursor: pointer;
-  width: 40%;
-  text-align: center;
+  padding: 10px 20px; /* Ajuste del padding */
+  width: 50%; /* Ancho del 100% para ser responsive */
   margin: auto;
   display: block;
-  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 16px; /* Tamaño de fuente aumentado */
+  transition: background-color 0.3s; /* Transición suave */
 }
 
+/* Estilo de botón primario al pasar el cursor */
 .btn-primary:hover {
   background-color: #ffa303;
 }
 
-.custom-link {
-  color: #ffffff;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-right: auto;
+/* Contenedor de iconos */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
+/* Enlace personalizado */
+.custom-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Estilo de enlace personalizado al pasar el cursor */
 .custom-link:hover {
   color: #ed1c55;
+}
+
+/* Estilo para mensaje de retroalimentación de validación inválida */
+.invalid-feedback {
+  font-size: 12px;
+  color: #ed1c55;
+}
+
+/* Contenedor de línea divisoria */
+.divider-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Línea divisoria */
+.divider-line {
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: #ffffff; /* Cambia el color de las líneas según tu preferencia */
+  margin: 0 10px; /* Espacio entre las líneas y el "O" */
 }
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .form-container {
-    width: 90%; /* Reducimos el ancho para pantallas pequeñas */
-    max-width: none; /* Eliminamos el ancho máximo */
+    width: 90%; /* Ancho del formulario al 90% para pantallas pequeñas */
+    max-width: none;
   }
 
   .btn-primary {
-    width: 100%; /* Ancho del botón al 100% para pantallas pequeñas */
+    width: 50%; /* Botón ahora ocupa el ancho completo */
   }
 
+  /* Otros estilos específicos para pantallas pequeñas */
   .conferencia-item-title {
     font-size: 3vw;
+  }
+
+  .custom-flex-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .custom-checkbox,
+  .custom-link-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    margin-right: 10px;
   }
 }
 
