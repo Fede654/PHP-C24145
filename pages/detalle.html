@@ -16,8 +16,8 @@
     <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- APP CSS -->
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../grid.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
@@ -26,32 +26,82 @@
         <div class="container">
             <div class="nav">
                 <a href="#" class="logo">
-                    <img src="./images/logo-eventearla.png" alt="logo-eventearla" height="40px">
+                    <img src="../images/logo-eventearla.png" alt="logo-eventearla" height="40px">
                 </a>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='nav-menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#">Agenda</a></li>
                     <li><a href="#">Sponsors</a></li>
                     <li><a href="#">Contacto</a></li>
                     <li>
-                        <a href="pages/registro.html" class="btn btn-hover">
+                        <a href="registro.html" class="btn btn-hover">
                             <span>Registrarse</span>
                         </a>
                     </li>
                 </ul>
-                <!-- MOBILE MENU TOGGLE -->
-                <div class="hamburger-menu" id="hamburger-menu">
-                    <div class="hamburger"></div>
-                </div>
             </div>
         </div>
     </div>
     <!-- END NAV SECTION-->
 
     
-    <div>
-        <div>
-            <img src="./images/speaker-max-contieri.jpg" alt="logo"/>
+    <div class="fondo-manito-detalle">
+        <div class="container-detalle">
+            <div class="row">
+                <div>
+                    <p class="titulo-detalle-sm">¡Conviértete en un Centauro del Código Limpio!</p>
+                </div>
+                <div class="col-4 col-sm-12" style="text-align: center">
+                    <img src="../images/speaker-max-contieri.jpg" alt="logo" class="imagen-detalle"/>
+                </div>
+                <div class="col-8  col-sm-12 ">
+                    <p class="titulo-detalle">¡Conviértete en un Centauro del Código Limpio!</p>
+                    <p class="subtitulo-detalle">DEV</p>
+                    <p class="subtitulo-detalle">Stream A</p>
+                    <p class="conteiner-hora" style="margin-top: 1rem;">Día Jueves 11 Abril 2024</p>
+                    <div class="conteiner-hora">
+                        <div class="hora">
+                            <p>MEX</p>
+                            <p>08:25</p>
+                        </div>
+                        <div>
+                            <p>COL</p>
+                            <p>09:25</p>
+                        </div>
+                        <div>
+                            <p>CHI</p>
+                            <p>10:25</p>
+                        </div>
+                        <div>
+                            <p>ARG</p>
+                            <p>11:25</p>
+                        </div>
+                        <div>
+                            <p>ESP</p>
+                            <p>16:25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="titulo-info">Informacion</p>
+                <p class="texto-detalle">
+                    ¿Cómo podemos aprovechar ChatGPT, Gemini o Copilot para escribir código limpio?. ¿Qué instrucciones debemos proporcionarles? 
+                    ¿Cómo los configuramos para que nos ayuden? Los asistentes de código fueron entrenados con conjuntos de datos no tan bien curados. 
+                    A menudo les pedimos soluciones que cumplan con los requisitos, pero que no reflejen buenos diseños. Sin embargo, mediante algunas 
+                    instrucciones podemos indicarles cómo queremos que nos ayuden. De esta manera, las soluciones que proporcionen cumplirán con buenas 
+                    prácticas de desarrollo y estarán personalizadas según nuestras reglas. Veremos ejemplos concretos y consejos para aprovechar al 
+                    máximo estas magníficas herramientas combinando nuestra creatividad con todo el conocimiento disponible. Después de ver la charla, 
+                    podrás explicar tus propias reglas para que te ayuden de inmediato en tus estudios, trabajo y más. Esto potenciará tu carrera profesional 
+                    como un centauro, preparándote para las demandas laborales del futuro. Sobre Maximiliano Contieri: 🎓Learn something new every day.
+                    📆 💻CS software engineer / Book Author 👷code👨🏽‍🏫teach ✍🏾write 🎨Software Design 🏢SOLID 🌉TDD 👴Legacy 💩Code Smells
+                </p>
+                
+            </div>
         </div>
     </div>
       
@@ -64,7 +114,7 @@
                 <div class="col-4 col-md-6 col-sm-12">
                     <div class="content">
                         <a href="#" class="logo">
-                            <img src="images/logo-eventearla.png" alt="logo">
+                            <img src="../images/logo-eventearla.png" alt="logo">
                         </a>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa exercitationem officiis non error illum minima iusto et. Dolores, quibusdam?
@@ -98,8 +148,8 @@
                         <div class="col-3 col-md-6 col-sm-6">
                             <div class="content">
                                 <ul class="footer-menu">
-                                    <li><b><a href="pages/login.html">Ingresa</a></b></li>
-                                    <li><a href="pages/registro.html">Registrarse</a></li>
+                                    <li><b><a href="login.html">Ingresa</a></b></li>
+                                    <li><a href="registro.html">Registrarse</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -109,12 +159,12 @@
                                 <ul class="footer-menu">
                                     <li>
                                         <a href="#">
-                                            <img src="./images/google-play.png" alt="">
+                                            <img src="../images/google-play.png" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="./images/app-store.png" alt="">
+                                            <img src="../images/app-store.png" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -139,7 +189,7 @@
     <!-- OWL CAROUSEL -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <!-- APP SCRIPT -->
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
     <!-- END SCRIPTS SECTION -->
 
 </body>
