@@ -615,7 +615,7 @@ footer .content {
 }
 /* -----END FOOTER----- */
 
-/* ESTILOS PARA LA PAGINA DE REGISTRO E INICIO DE SESION */
+/* --------ESTILOS PARA LA PAGINA DE REGISTRO E INICIO DE SESION---------------- */
 
 /* Contenedor principal del formulario */
 .form-container {
@@ -623,7 +623,7 @@ footer .content {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  width: 600px; /* Ancho fijo del formulario */
+  width: 700px; /* Ancho fijo del formulario */
   margin: auto;
   box-sizing: border-box;
 }
@@ -694,10 +694,11 @@ footer .content {
 /* Contenedor de casilla de verificación personalizada */
 .custom-checkbox {
   flex-grow: 1;
-  padding: 20px;
   align-self: center;
   font-weight: bold;
   font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Estilo de casilla de verificación cuando está marcada */
@@ -812,7 +813,6 @@ footer .content {
   }
 }
 
-
 /* DETALLE INICIO */
 
 .fondo-manito-detalle {
@@ -826,18 +826,18 @@ footer .content {
   width: 60%;
   transition: transform 0.3s linear;
 }
-.titulo-detalle{
+.titulo-detalle {
   font-size: 3rem;
   font-weight: 900;
   color: #fff;
 }
-.titulo-detalle-sm{
+.titulo-detalle-sm {
   font-size: 1.8rem;
   font-weight: 900;
   color: #fff;
   display: none;
 }
-.titulo-info{
+.titulo-info {
   font-size: 3rem;
   font-weight: 900;
   color: #fff;
@@ -847,7 +847,7 @@ footer .content {
   font-weight: 700;
   color: #ffa303;
 }
-.conteiner-hora{
+.conteiner-hora {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -855,82 +855,82 @@ footer .content {
   font-weight: 900;
   color: #181616;
 }
-.texto-detalle{
+.texto-detalle {
   text-align: justify;
   font-size: 1.8rem;
 }
 
 @media (max-width: 1400px) {
-  .titulo-detalle{
+  .titulo-detalle {
     font-size: 2.5rem;
   }
   .subtitulo-detalle {
     font-size: 1.8rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 1.2rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 1.5rem;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 2.5rem;
   }
 }
 @media (max-width: 1200px) {
-  .titulo-detalle{
+  .titulo-detalle {
     font-size: 2.2rem;
   }
   .subtitulo-detalle {
     font-size: 1.7rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 1.2rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 1.4rem;
   }
   .imagen-detalle {
     width: 70%;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 2.2rem;
   }
 }
 @media (max-width: 1000px) {
-  .titulo-detalle{
+  .titulo-detalle {
     font-size: 2rem;
   }
   .subtitulo-detalle {
     font-size: 1.5rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 1.1rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 1.3rem;
   }
   .imagen-detalle {
     width: 80%;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 2rem;
   }
 }
 @media (max-width: 910px) {
-  .titulo-detalle{
+  .titulo-detalle {
     font-size: 1.8rem;
   }
   .subtitulo-detalle {
     font-size: 1.3rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 1rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 1.1rem;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 1.8rem;
   }
 }
@@ -938,11 +938,11 @@ footer .content {
   .imagen-detalle {
     width: 40%;
   }
-  .titulo-detalle{
+  .titulo-detalle {
     display: none;
   }
-  .titulo-detalle-sm{
-    display:flex;
+  .titulo-detalle-sm {
+    display: flex;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -951,47 +951,47 @@ footer .content {
   .subtitulo-detalle {
     font-size: 1.2rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 1rem;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 1.5rem;
   }
-  .titulo-detalle-sm{
+  .titulo-detalle-sm {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 490px) {
-  .titulo-detalle-sm{
+  .titulo-detalle-sm {
     font-size: 1.2rem;
   }
   .subtitulo-detalle {
     font-size: 1rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 0.8rem;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 1.2rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 0.8rem;
   }
 }
 @media (max-width: 400px) {
-  .titulo-detalle-sm{
+  .titulo-detalle-sm {
     font-size: 1.1rem;
   }
   .subtitulo-detalle {
     font-size: 1rem;
   }
-  .conteiner-hora{
+  .conteiner-hora {
     font-size: 0.7rem;
   }
-  .titulo-info{
+  .titulo-info {
     font-size: 1.1rem;
   }
-  .texto-detalle{
+  .texto-detalle {
     font-size: 0.7rem;
   }
 }

@@ -7,32 +7,35 @@
     <title>EventearLA</title>
 
     <!-- Enlaces a fuentes externas -->
+    <!-- Enlace a la fuente de Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
     />
+    <!-- Enlace al ícono de la página -->
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 
     <!-- Enlaces a bibliotecas externas -->
+    <!-- Enlace al archivo CSS de AOS para animaciones -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Enlace al archivo CSS de Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
-      rel="stylesheet"
-    />
 
+    <!-- Enlace al archivo CSS de estilos personalizados -->
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="bodyRegistrarse">
+    <!-- Enlace al inicio de la página -->
     <a
       href="../index.html"
       style="display: block; margin: auto; text-align: center"
     >
+      <!-- Imagen del logo -->
       <img
         src="../images/logo-eventearla.png"
         alt="logo-eventearla"
@@ -41,14 +44,21 @@
       />
     </a>
     <main class="mainRegistrarse">
-      <!-- Aquí va el código del formulario de Bootstrap -->
+      <!-- Contenedor del formulario -->
       <section
         class="form-container"
         data-aos="flip-left"
         data-aos-duration="1000"
       >
-        <form id="registroForm" action="../index.html" method="get"  class="needs-validation"
-        novalidate>
+        <!-- Formulario de registro -->
+        <form
+          id="registroForm"
+          action="../index.html"
+          method="get"
+          class="needs-validation"
+          novalidate
+        >
+          <!-- Campo de correo electrónico -->
           <div class="mb-3 form-group">
             <label for="inputEmail" class="form-label"
               >Correo electrónico</label
@@ -60,9 +70,11 @@
               placeholder="Correo electrónico"
               required
             />
+            <!-- Mensaje de retroalimentación para correo electrónico -->
             <div class="valid-feedback"></div>
             <div class="invalid-feedback">Este campo es obligatorio.</div>
           </div>
+          <!-- Campo de contraseña -->
           <div class="mb-3 form-group">
             <label for="inputContraseña" class="form-label">Contraseña</label>
             <input
@@ -72,9 +84,11 @@
               placeholder="Contraseña"
               required
             />
+            <!-- Mensaje de retroalimentación para contraseña -->
             <div class="valid-feedback"></div>
             <div class="invalid-feedback">Este campo es obligatorio.</div>
           </div>
+          <!-- Campo de usuario -->
           <div class="mb-3 form-group">
             <label for="inputUsuario" class="form-label">Usuario</label>
             <input
@@ -84,9 +98,11 @@
               placeholder="Usuario"
               required
             />
+            <!-- Mensaje de retroalimentación para usuario -->
             <div class="valid-feedback"></div>
             <div class="invalid-feedback">Este campo es obligatorio.</div>
           </div>
+          <!-- Campo de dirección -->
           <div class="mb-3 form-group">
             <label for="inputDireccion" class="form-label">Dirección</label>
             <input
@@ -96,13 +112,15 @@
               placeholder="Dirección"
               required
             />
+            <!-- Mensaje de retroalimentación para dirección -->
             <div class="valid-feedback"></div>
             <div class="invalid-feedback">Este campo es obligatorio.</div>
           </div>
+          <!-- Campo de selección de país -->
           <div class="mb-3 form-group">
             <label for="inputPais" class="form-label">País</label>
-            <select id="inputPais" class="form-select">
-              <option selected>País</option>
+            <select id="inputPais" class="form-select" required>
+              <option selected hidden>País</option>
               <option value="AR">Argentina</option>
               <option value="BO">Bolivia</option>
               <option value="BR">Brasil</option>
@@ -114,77 +132,96 @@
               <option value="UY">Uruguay</option>
               <option value="VE">Venezuela</option>
             </select>
-            </div>
-
-            <div class="mb-3 form-group">
-              <label for="inputCity" class="form-label">Ciudad</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputCity"
-                placeholder="Ciudad"
-                required
+            <!-- Mensaje de retroalimentación para selección de país -->
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback">Por favor seleccione un país.</div>
+          </div>
+          <!-- Campo de ciudad -->
+          <div class="mb-3 form-group">
+            <label for="inputCity" class="form-label">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="Ciudad"
+              required
             />
+            <!-- Mensaje de retroalimentación para ciudad -->
             <div class="valid-feedback"></div>
             <div class="invalid-feedback">Este campo es obligatorio.</div>
-            </div>
-
-            <div class="custom-flex-container">
-              <div class="custom-checkbox">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="gridCheck"
-                />
-                <label class="form-check-label" for="gridCheck"
-                  >Acepto políticas de privacidad</label
-                >
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-            <p class="pt-20 mt-20 fw-bold small">
-              ¿Ya tienes cuenta?
-              <a href="./login.html" class="link-danger">Iniciar Sesión</a>
-            </p>
           </div>
+          <!-- Contenedor del checkbox de políticas de privacidad -->
+          <div class="custom-flex-container">
+            <div class="custom-checkbox">
+              <input type="checkbox" class="form-check-input" id="gridCheck" />
+              <label class="form-check-label" for="gridCheck"
+                >Acepto políticas de privacidad</label
+              >
+            </div>
+          </div>
+          <!-- Botón de registro -->
+          <button type="submit" class="btn btn-primary">Registrarse</button>
+          <!-- Enlace para iniciar sesión -->
+          <p class="pt-20 mt-20 fw-bold small">
+            ¿Ya tienes cuenta?
+            <a href="./login.html" class="link-danger">Iniciar Sesión</a>
+          </p>
         </form>
       </section>
       <!-- Fin del formulario -->
     </main>
+
+    <!-- Scripts de JavaScript -->
+    <!-- Script de Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Script de Font Awesome -->
     <script
       src="https://kit.fontawesome.com/f7fb471b65.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Script de AOS para animaciones -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      // Inicialización de AOS
       AOS.init();
     </script>
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      // Script para validación de formulario
       (function () {
         "use strict";
         window.addEventListener(
           "load",
           function () {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            // Obtiene todos los formularios que necesitan validación de Bootstrap
             var forms = document.getElementsByClassName("needs-validation");
-            // Loop over them and prevent submission
+            // Convierte la colección de formularios en un array
             var validation = Array.prototype.filter.call(
               forms,
               function (form) {
+                // Agrega un listener de evento para la validación al enviar el formulario
                 form.addEventListener(
                   "submit",
                   function (event) {
-                    if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
+                    // Obtiene el elemento de selección de país
+                    var paisSelect = form.querySelector("#inputPais");
+                    // Verifica si el país seleccionado es vacío
+                    if (paisSelect.value === "") {
+                      event.preventDefault(); // Detiene el envío del formulario
+                      event.stopPropagation(); // Detiene la propagación del evento
+                      paisSelect.classList.add("is-invalid"); // Agrega clase de "inválido" al elemento de selección de país
+                    } else {
+                      paisSelect.classList.remove("is-invalid"); // Remueve clase de "inválido" del elemento de selección de país
                     }
-                    form.classList.add("was-validated");
+                    // Verifica si el formulario es válido
+                    if (form.checkValidity() === false) {
+                      event.preventDefault(); // Detiene el envío del formulario
+                      event.stopPropagation(); // Detiene la propagación del evento
+                    }
+                    form.classList.add("was-validated"); // Agrega clase de "validado" al formulario
                   },
                   false
                 );
