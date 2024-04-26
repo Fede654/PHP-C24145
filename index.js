@@ -38,20 +38,20 @@ $(document).ready(() => {
     })
 
     $('.conferencias-slide').owlCarousel({
-        items: 2,
+        items: 1,
         dots: false,
         nav:true,
         navText: navText,
         margin: 15,
         responsive: {
-            500: {
+            650: {
                 items: 2
+            },
+            900: {
+                items: 3
             },
             1280: {
                 items: 4
-            },
-            1600: {
-                items: 6
             }
         }
     })
