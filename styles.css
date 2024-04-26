@@ -816,7 +816,14 @@ footer .content {
 /* DETALLE INICIO */
 
 .container-detalle {
-  padding-top: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 70%; /* Ancho fijo */
+  margin: auto;
+  margin-top: 50px;
+  box-sizing: border-box;
 }
 
 .imagen-detalle {
@@ -852,10 +859,6 @@ footer .content {
   width: inherit;
 }
 
-.info-charla {
-  width: 80%;
-}
-
 .titulo-info-detalle {
   font-size: 1.5rem;
   font-weight: 600;
@@ -878,7 +881,7 @@ footer .content {
 
 @media (max-width: 576px) {
   .container-detalle {
-    margin: 20px;
+    width: 90%; /* Ancho fijo */
   }
   .titulo-detalle {
     margin-bottom: 20px;
