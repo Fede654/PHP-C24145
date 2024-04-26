@@ -792,7 +792,7 @@ footer .content {
 
   /* Otros estilos específicos para pantallas pequeñas */
   .conferencia-item-title {
-    font-size: 3vw;
+    font-size: 7vw;
   }
 
   .custom-flex-container {
@@ -815,21 +815,18 @@ footer .content {
 
 /* DETALLE INICIO */
 
-.fondo-manito-detalle {
-  background-image: url("images/fondo-manito.png");
-  background-color: #ed1c55;
-  padding: 2rem;
-  margin: 2rem;
+.container-detalle {
+  padding-top: 80px;
 }
 
 .imagen-detalle {
-  width: 60%;
+  width: 85%;
   transition: transform 0.3s linear;
 }
 .titulo-detalle {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  color: #fff;
+  color: #ed1c55;
 }
 .titulo-detalle-sm {
   font-size: 1.8rem;
@@ -837,30 +834,66 @@ footer .content {
   color: #fff;
   display: none;
 }
-.titulo-info {
-  font-size: 3rem;
-  font-weight: 900;
+.subtitulo-detalle {
+  font-size: 1.6rem;
+  font-weight: lighter;
+  color: #ffa303;
+}
+
+.container-hora-detalle {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: #fff;
+  width: inherit;
+}
+
+.info-charla {
+  width: 80%;
+}
+
+.titulo-info-detalle {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
 }
-.subtitulo-detalle {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffa303;
+.texto-detalle {
+  text-align: justify;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  line-height: 1.3rem;
 }
 .conteiner-hora {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 900;
-  color: #181616;
-}
-.texto-detalle {
-  text-align: justify;
-  font-size: 1.8rem;
+  color: #fff;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 576px) {
+  .container-detalle {
+    margin: 20px;
+  }
+  .titulo-detalle {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .container-hora-detalle {
+    font-size: 1.2rem;
+  }
+  .info-charla {
+    width: 100%;
+  }
+}
+
+
+/* @media (max-width: 1400px) {
   .titulo-detalle {
     font-size: 2.5rem;
   }
@@ -995,5 +1028,5 @@ footer .content {
     font-size: 0.7rem;
   }
 }
-
+ */
 /* DETALLE FIN */
