@@ -414,7 +414,7 @@ img {
 }
 
 .conferencia-infos {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   flex-wrap: wrap;
   margin-top: calc(var(--space-top) / 2);
@@ -423,14 +423,23 @@ img {
 .conferencia-info {
   display: flex;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 1.8vw;
   font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--main-color);
 }
+
+.conferencia-info-job {
+  font-weight: lighter;
+  font-size: 1vw;
+}
+
 @media screen and (min-width: 1000px) {
   .conferencia-info {
     font-size: 0.96rem;
   }
 }
+
 .conferencia-info span {
   margin-left: 5px;
 }
@@ -793,6 +802,12 @@ footer .content {
   /* Otros estilos específicos para pantallas pequeñas */
   .conferencia-item-title {
     font-size: 7vw;
+  }
+  .conferencia-info {
+    font-size: 3vw;
+  }
+  .conferencia-info-job {
+    font-size: 3vw;
   }
 
   .custom-flex-container {
