@@ -56,3 +56,26 @@ $(document).ready(() => {
         }
     })
 })
+
+//hacer un pedido(Solicitud-request) a la API
+fetch('https://rickandmortyapi.com/api/character')
+    .then(response => response.json())
+    .then(data => {
+        const usuario = data.results[1];
+        const name = usuario.name;
+        const especie = usuario.species;
+        const foto = usuario.image;
+        
+        //mostrar por el navegador
+        const userInfo = document.getElementById('user-info');
+        userInfo.innerHTML = `${name}`;
+        const userInfo2 = document.getElementById('user-job');
+        userInfo2.innerHTML = `${especie}`;
+        const userInfo3 = document.getElementById('user-photo');
+        userInfo3.innerHTML = `${foto}`;
+        console.log(foto);
+
+    })
+    .catch(error => {
+        console.log("No se obtuvieron datos", error);
+    });
