@@ -430,6 +430,7 @@ img {
 }
 
 .conferencia-info-job {
+  display: flex;
   font-weight: lighter;
   font-size: 1vw;
 }
