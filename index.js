@@ -1,4 +1,7 @@
-$(document).ready(() => {
+$(document).ready(async () => {
+
+    await populateHeroes(6);
+
     $('#hamburger-menu').click(() => {
         $('#hamburger-menu').toggleClass('active')
         $('#nav-menu').toggleClass('active')
@@ -56,23 +59,3 @@ $(document).ready(() => {
         }
     })
 })
-
-//hacer un pedido(Solicitud-request) a la API
-fetch('https://rickandmortyapi.com/api/character')
-    .then(response => response.json())
-    .then(data => {
-        const usuario = data.results[1];
-        const name = usuario.name;
-        const especie = usuario.species;
-        
-        //mostrar por el navegador
-        const userInfo = document.getElementById('user-info');
-        userInfo.innerHTML = `${name}`;
-        const userInfo2 = document.getElementById('user-job');
-        userInfo2.innerHTML = `${especie}`;
-
-        document.getElementById("user-photo").src = usuario.image;
-    })
-    .catch(error => {
-        console.log("No se obtuvieron datos", error);
-    });
