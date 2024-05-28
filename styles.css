@@ -775,6 +775,12 @@ footer .content {
   color: #ed1c55;
 }
 
+/* Estilo para mensaje de retroalimentación de validación inválida */
+.invalid-form-input {
+  font-size: 12px;
+  color: #ed1c55;
+}
+
 /* Contenedor de línea divisoria */
 .divider-container {
   display: flex;

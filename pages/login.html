@@ -72,8 +72,7 @@
               required
             />
             <!-- Mensaje de retroalimentación para usuario -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputUsuario" class="invalid-form-input"></span>
           </div>
 
           <!-- Campo de contraseña -->
@@ -88,8 +87,7 @@
               required
             />
             <!-- Mensaje de retroalimentación para contraseña -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputContraseña" class="invalid-form-input"></span>
           </div>
 
           <!-- Contenedor para checkbox de "Recuérdame" y enlace de "Olvidaste tu contraseña?" -->
@@ -163,36 +161,57 @@
       // Inicialización de AOS
       AOS.init();
     </script>
-    <!-- Script para la validación de formularios de Bootstrap -->
+    <!-- Script para la validación del form -->
     <script>
-      (function () {
-        "use strict";
-        window.addEventListener(
-          "load",
-          function () {
-            // Obtiene todos los formularios que necesitan validación de Bootstrap
-            var forms = document.getElementsByClassName("needs-validation");
-            // Itera sobre ellos y previene la presentación
-            var validation = Array.prototype.filter.call(
-              forms,
-              function (form) {
-                form.addEventListener(
-                  "submit",
-                  function (event) {
-                    if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                    }
-                    form.classList.add("was-validated");
-                  },
-                  false
-                );
-              }
-            );
-          },
-          false
-        );
-      })();
+      document.getElementById("registroForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        var inputUsuario = document.getElementById("inputUsuario").value;
+        var inputContraseña = document.getElementById("inputContraseña").value;
+        var invalidUsuario = document.getElementById("invalid-inputUsuario");
+        var invalidContraseña = document.getElementById("invalid-inputContraseña");
+        // Reset spans
+        invalidUsuario.innerHTML = ""
+        invalidContraseña.innerHTML = ""
+        // Chequea campos vacíos
+        if(inputUsuario.trim()==="")
+          invalidUsuario.innerHTML = "El nombre de usuario no puede estar vacío.";
+        if(inputContraseña.trim()==="")
+          invalidContraseña.innerHTML = "La contraseña no puede estar vacía.";
+        // Si hay restricciones return
+        if (invalidUsuario.innerHTML !== "" || invalidContraseña.innerHTML !== "")
+          return;
+        // Login con éxito
+        alert('El login se realizó con éxito.');
+        window.location.href = "../index.html";
+      });
+      // (function () {
+      //   "use strict";
+      //   window.addEventListener(
+      //     "load",
+      //     function () {
+      //       // Obtiene todos los formularios que necesitan validación de Bootstrap
+      //       var forms = document.getElementsByClassName("needs-validation");
+      //       // Itera sobre ellos y previene la presentación
+      //       var validation = Array.prototype.filter.call(
+      //         forms,
+      //         function (form) {
+      //           form.addEventListener(
+      //             "submit",
+      //             function (event) {
+      //               if (form.checkValidity() === false) {
+      //                 event.preventDefault();
+      //                 event.stopPropagation();
+      //               }
+      //               form.classList.add("was-validated");
+      //             },
+      //             false
+      //           );
+      //         }
+      //       );
+      //     },
+      //     false
+      //   );
+      // })();
     </script>
   </body>
 </html>

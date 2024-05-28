@@ -70,11 +70,11 @@
               class="form-control"
               id="inputEmail"
               placeholder="Correo electrónico"
+              autocomplete="email"
               required
             />
             <!-- Mensaje de retroalimentación para correo electrónico -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputEmail" class="invalid-form-input"></span>
           </div>
           <!-- Campo de contraseña -->
           <div class="mb-3 form-group">
@@ -84,11 +84,11 @@
               class="form-control"
               id="inputContraseña"
               placeholder="Contraseña"
+              autocomplete="new-password"
               required
             />
             <!-- Mensaje de retroalimentación para contraseña -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputContraseña" class="invalid-form-input"></span>
           </div>
           <!-- Campo de usuario -->
           <div class="mb-3 form-group">
@@ -98,11 +98,11 @@
               class="form-control"
               id="inputUsuario"
               placeholder="Usuario"
+              autocomplete="username"
               required
             />
             <!-- Mensaje de retroalimentación para usuario -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputUsuario" class="invalid-form-input"></span>
           </div>
           <!-- Campo de dirección -->
           <div class="mb-3 form-group">
@@ -115,8 +115,7 @@
               required
             />
             <!-- Mensaje de retroalimentación para dirección -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputDireccion" class="invalid-form-input"></span>
           </div>
           <!-- Campo de selección de país -->
           <div class="mb-3 form-group">
@@ -135,8 +134,7 @@
               <option value="VE">Venezuela</option>
             </select>
             <!-- Mensaje de retroalimentación para selección de país -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Por favor seleccione un país.</div>
+            <span id= "invalid-inputPais" class="invalid-form-input"></span>
           </div>
           <!-- Campo de ciudad -->
           <div class="mb-3 form-group">
@@ -149,8 +147,7 @@
               required
             />
             <!-- Mensaje de retroalimentación para ciudad -->
-            <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Este campo es obligatorio.</div>
+            <span id= "invalid-inputCity" class="invalid-form-input"></span>
           </div>
           <!-- Contenedor del checkbox de políticas de privacidad -->
           <div class="custom-flex-container">
@@ -159,6 +156,8 @@
               <label class="form-check-label" for="gridCheck"
                 >Acepto políticas de privacidad</label
               >
+              <!-- Mensaje de retroalimentación para Acepto Condiciones -->
+              <span id= "invalid-gridCheck" class="invalid-form-input"></span>
             </div>
           </div>
           <!-- Botón de registro -->
@@ -191,48 +190,82 @@
       // Inicialización de AOS
       AOS.init();
     </script>
+    <!-- Script para la validación del form -->
     <script>
-      // Script para validación de formulario
-      (function () {
-        "use strict";
-        window.addEventListener(
-          "load",
-          function () {
-            // Obtiene todos los formularios que necesitan validación de Bootstrap
-            var forms = document.getElementsByClassName("needs-validation");
-            // Convierte la colección de formularios en un array
-            var validation = Array.prototype.filter.call(
-              forms,
-              function (form) {
-                // Agrega un listener de evento para la validación al enviar el formulario
-                form.addEventListener(
-                  "submit",
-                  function (event) {
-                    // Obtiene el elemento de selección de país
-                    var paisSelect = form.querySelector("#inputPais");
-                    // Verifica si el país seleccionado es vacío
-                    if (paisSelect.value === "") {
-                      event.preventDefault(); // Detiene el envío del formulario
-                      event.stopPropagation(); // Detiene la propagación del evento
-                      paisSelect.classList.add("is-invalid"); // Agrega clase de "inválido" al elemento de selección de país
-                    } else {
-                      paisSelect.classList.remove("is-invalid"); // Remueve clase de "inválido" del elemento de selección de país
-                    }
-                    // Verifica si el formulario es válido
-                    if (form.checkValidity() === false) {
-                      event.preventDefault(); // Detiene el envío del formulario
-                      event.stopPropagation(); // Detiene la propagación del evento
-                    }
-                    form.classList.add("was-validated"); // Agrega clase de "validado" al formulario
-                  },
-                  false
-                );
-              }
-            );
-          },
-          false
-        );
-      })();
+      document.getElementById("registroForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        const Ids = ["inputEmail", "inputUsuario", "inputContraseña", "inputDireccion", "inputPais", "inputCity", "gridCheck"]
+        const Inputs = Ids.map( Id => document.getElementById(Id).value);
+        const Spans = Ids.map( Id => document.getElementById("invalid-"+Id));
+        // for (const span of Spans)
+        //   span.innerHTML = ""; 
+        // Chequea campos vacíos
+        SpansText = Inputs.map(input => (input.trim()==="") ? "Este campo es obligatorio." : "");
+        // Chequea valor por defecto campo País
+        if(Inputs[4]==="País")
+          SpansText[4] = "Este campo es obligatorio.";
+        // Chequea formato email
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(Inputs[0])
+          if(!regexEmail.test(Inputs[0]))
+            SpansText[0] = "El email no cumple las especificaciones.";
+        // Chequea Acepto Condiciones
+        if(!document.getElementById(Ids[6]).checked)
+          SpansText[6] = "Debe aceptar los términos del Servicio.";
+        // Escribe spans de restricciones
+        var zip = [];
+        for ( var i=0; i<Spans.length; i++)
+          zip.push([Spans[i],SpansText[i]]);
+        for (const [first, second] of zip)
+          first.innerHTML = second;
+        // Si hay restricciones return
+        if (!SpansText.every(x => x === ""))
+          return;
+        // Registra con éxito       
+        alert('El Registro se realizó con éxito!!');
+        window.location.href = "../index.html";
+      });
+    // Script para validación de formulario
+    //   (function () {
+    //     "use strict";
+    //     window.addEventListener(
+    //       "load",
+    //       function () {
+    //         // Obtiene todos los formularios que necesitan validación de Bootstrap
+    //         var forms = document.getElementsByClassName("needs-validation");
+    //         // Convierte la colección de formularios en un array
+    //         var validation = Array.prototype.filter.call(
+    //           forms,
+    //           function (form) {
+    //             // Agrega un listener de evento para la validación al enviar el formulario
+    //             form.addEventListener(
+    //               "submit",
+    //               function (event) {
+    //                 // Obtiene el elemento de selección de país
+    //                 var paisSelect = form.querySelector("#inputPais");
+    //                 // Verifica si el país seleccionado es vacío
+    //                 if (paisSelect.value === "") {
+    //                   event.preventDefault(); // Detiene el envío del formulario
+    //                   event.stopPropagation(); // Detiene la propagación del evento
+    //                   paisSelect.classList.add("is-invalid"); // Agrega clase de "inválido" al elemento de selección de país
+    //                 } else {
+    //                   paisSelect.classList.remove("is-invalid"); // Remueve clase de "inválido" del elemento de selección de país
+    //                 }
+    //                 // Verifica si el formulario es válido
+    //                 if (form.checkValidity() === false) {
+    //                   event.preventDefault(); // Detiene el envío del formulario
+    //                   event.stopPropagation(); // Detiene la propagación del evento
+    //                 }
+    //                 form.classList.add("was-validated"); // Agrega clase de "validado" al formulario
+    //               },
+    //               false
+    //             );
+    //           }
+    //         );
+    //       },
+    //       false
+    //     );
+    //   })();
     </script>
   </body>
 </html>
