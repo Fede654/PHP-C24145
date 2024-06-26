@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventearLA</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- OWL CAROUSEL -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="../grid.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <!-- NAV SECTION-->
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="nav">
+          <a href="../index.html" class="logo">
+            <img
+              src="../images/logo-eventearla.png"
+              alt="logo-eventearla"
+              height="40px"
+            />
+          </a>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="nav-menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#">Agenda</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li>
+              <a href="login.html" class="btn btn-hover">
+                <span>Iniciar sesión</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END NAV SECTION-->
+
+    <!-- Contenedor principal del formulario -->
+    <main class="mainRegistrarse">
+        <section class="form-container" data-aos="flip-left" data-aos-duration="1000"
+        >
+
+        <h1>Carga de Charlas 2024</h1>
+
+         <!-- FORM DE CARGA DE CHARLAS -->
+          
+         <form id="itemForm" class="mb-4">
+                  <input type="hidden" id="id" name="id">
+
+                  <div class="form-group">
+                      <label for="titulo">Titulo:</label>
+                      <input type="text" class="form-control" id="titulo" name="titulo" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="fecha_lanzamiento">Fecha Lanz.:</label>
+                      <input type="date" class="form-control" id="fecha_lanzamiento" name="fecha_lanzamiento" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="genero">Genero:</label>
+                      <input type="text" class="form-control" id="genero" name="genero" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="duracion">Duracion:</label>
+                      <input type="text" class="form-control" id="duracion" name="duracion" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="director">Directo:</label>
+                      <input type="text" class="form-control" id="director" name="director" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="reparto">Reparto:</label>
+                      <input type="text" class="form-control" id="reparto" name="reparto" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="sinopsis">Sinopsis:</label>
+                      <input type="text" class="form-control" id="sinopsis" name="sinopsis" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="imagen">Imagen:</label>
+                      <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen" requerid >
+                  </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+         </form>
+        </section>
+          <!-- FIN FORM DE CARGA DE CHARLAS -->
+
+          <!-- tabla -->
+
+        <section class="sectionFormularioTabla">
+          <h2>Peliculas</h2>
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Titulo</th>
+                      <th>Fecha Lanz.</th>
+                      <th>Genero</th>
+                      <th>Duracion</th>
+                      <th>Director</th>
+                      <th>Reparto</th>
+                      <th>Sinopsis</th>                        
+                      <th colspan="2">Accciones</th>
+                  </tr>
+                  <tbody id="itemsTableBody">
+                          <!-- Lo vamos a generar con JS -->
+                  </tbody>
+              </thead>
+          </table>
+        </section>
+    </main>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-md-6 col-sm-12">
+            <div class="content">
+              <a href="#" class="logo">
+                <img src="../images/logo-eventearla.png" alt="logo" />
+              </a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa
+                exercitationem officiis non error illum minima iusto et.
+                Dolores, quibusdam?
+              </p>
+              <div class="social-list">
+                <a href="#" class="social-item">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="social-item">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="social-item">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <p><b>El evento</b></p>
+                  <ul class="footer-menu">
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Speakers</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="#">Contacto</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <ul class="footer-menu">
+                    <li>
+                      <b><a href="login.html">Ingresa</a></b>
+                    </li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-3 col-md-6 col-sm-6">
+                <div class="content">
+                  <p><b>Download app</b></p>
+                  <ul class="footer-menu">
+                    <li>
+                      <a href="#">
+                        <img src="../images/google-play.png" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="../images/app-store.png" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+    <div class="copyright">
+      <small> All Right Reserved &copy; Copyright - Grupo 6 - PHP.</small>
+    </div>
+    <!-- END COPYRIGHT SECTION -->
+
+    <!-- SCRIPTS SECTION -->
+    <!-- API -->
+    <script src="../api_heroes.js"></script>
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- OWL CAROUSEL -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- APP SCRIPT -->
+    <script src="../index.js"></script>
+    <script src="../js/app.js"></script>
+    <!-- END SCRIPTS SECTION -->
+  </body>
+</html>
