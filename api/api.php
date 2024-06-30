@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type");
 
 include 'db.php';
-include 'Peliculas.php';
+include 'Conferencia.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -27,21 +27,21 @@ switch ($method) {
         break;
 }
 
-//este metodo me devuelve una pelicula o todas las peliculas
+//este metodo me devuelve una conferencia o todas las conferencias
 function handleGet($conn) 
 {
     $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
     if ($id > 0) 
     {
-        $stmt = $conn->prepare("SELECT * FROM peliculas WHERE id = ?");
+        $stmt = $conn->prepare("SELECT * FROM conferencias WHERE id = ?");
         $stmt->execute([$id]);
-        $pelicula = $stmt->fetch(PDO::FETCH_ASSOC);
+        $conferencia = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($pelicula) 
+        if ($conferencia) 
         {
-            $peliculaObj = Peliculas::fromArray($pelicula);
-            echo json_encode($peliculaObj->toArray());
+            $conferenciaObj = Conferencia::fromArray($conferencia);
+            echo json_encode($conferenciaObj->toArray());
         } 
         else 
         {
@@ -51,15 +51,15 @@ function handleGet($conn)
     } 
     else 
     {
-        $stmt = $conn->query("SELECT * FROM peliculas");
-        $peliculas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $peliculaObjs = array_map(fn($pelicula) => Peliculas::fromArray($pelicula)->toArray(), $peliculas);
-        echo json_encode(['peliculas' => $peliculaObjs]);
+        $stmt = $conn->query("SELECT * FROM conferencias");
+        $conferencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $conferenciaObjs = array_map(fn($conferencia) => Conferencia::fromArray($conferencia)->toArray(), $conferencias);
+        echo json_encode(['conferencias' => $conferenciaObjs]);
     }
 }
 
 
-//este metodo es para ingresar peliculas
+//este metodo es para ingresar conferencias
 function handlePost($conn) 
 {
     if ($conn === null) 
@@ -70,37 +70,37 @@ function handlePost($conn)
 
     $data = json_decode(file_get_contents('php://input'), true);
 
-    $requiredFields = ['titulo', 'fecha_lanzamiento','genero' ];
+    $requiredFields = ['titulo', 'fecha','orador' ];
     foreach ($requiredFields as $field) 
     {
         if (!isset($data[$field])) 
         {
-            echo json_encode(['message' => 'Datos de la película incompletos']);
+            echo json_encode(['message' => 'Datos de la Conferencia incompletos']);
             return;
         }
     }
 
-    $pelicula = Peliculas::fromArray($data);
+    $conferencia = Conferencia::fromArray($data);
 
     try 
     {
-        $stmt = $conn->prepare("INSERT INTO peliculas (titulo, fecha_lanzamiento, genero, duracion, director, reparto, sinopsis) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO conferencias (titulo, orador, fecha, horario, ubicacion, sinopsis, categoria) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([
-            $pelicula->titulo,
-            $pelicula->fecha_lanzamiento,
-            $pelicula->genero,
-            $pelicula->duracion,
-            $pelicula->director,
-            $pelicula->reparto,
-            $pelicula->sinopsis
+            $conferencia->titulo,
+            $conferencia->orador,
+            $conferencia->fecha,
+            $conferencia->horario,
+            $conferencia->ubicacion,
+            $conferencia->sinopsis,
+            $conferencia->categoria
            
         ]);
 
-        echo json_encode(['message' => 'Película ingresada correctamente']);
+        echo json_encode(['message' => 'Conferencia ingresada correctamente']);
     } 
     catch (PDOException $e) 
     {
-        echo json_encode(['message' => 'Error al ingresar la película', 'error' => $e->getMessage()]);
+        echo json_encode(['message' => 'Error al ingresar la conferencia', 'error' => $e->getMessage()]);
     }
 }
 
@@ -109,51 +109,52 @@ function handlePost($conn)
 function handlePut($conn) 
 {
     $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-
+    
+    
     if ($id > 0) 
     {
         $data = json_decode(file_get_contents('php://input'), true);
-        $pelicula = Peliculas::fromArray($data);
-        $pelicula->id = $id;
+        $conferencia = Conferencia::fromArray($data);
+        $conferencia->id = $id;
 
         $fields = [];
         $params = [];
 
-        if ($pelicula->titulo !== null) {
+        if ($conferencia->titulo !== null) {
             $fields[] = 'titulo = ?';
-            $params[] = $pelicula->titulo;
+            $params[] = $conferencia->titulo;
         }
-        if ($pelicula->genero !== null) {
-            $fields[] = 'genero = ?';
-            $params[] = $pelicula->genero;
+        if ($conferencia->orador !== null) {
+            $fields[] = 'orador = ?';
+            $params[] = $conferencia->orador;
         }
-        if ($pelicula->fecha_lanzamiento !== null) {
-            $fields[] = 'fecha_lanzamiento = ?';
-            $params[] = $pelicula->fecha_lanzamiento;
+        if ($conferencia->fecha !== null) {
+            $fields[] = 'fecha = ?';
+            $params[] = $conferencia->fecha;
         }
-        if ($pelicula->duracion !== null) {
-            $fields[] = 'duracion = ?';
-            $params[] = $pelicula->duracion;
+        if ($conferencia->horario !== null) {
+            $fields[] = 'horario = ?';
+            $params[] = $conferencia->horario;
         }
-        if ($pelicula->director !== null) {
-            $fields[] = 'director = ?';
-            $params[] = $pelicula->director;
+        if ($conferencia->ubicacion !== null) {
+            $fields[] = 'ubicacion = ?';
+            $params[] = $conferencia->ubicacion;
         }
-        if ($pelicula->reparto !== null) {
-            $fields[] = 'reparto = ?';
-            $params[] = $pelicula->reparto;
-        }
-        if ($pelicula->sinopsis !== null) {
+        if ($conferencia->sinopsis !== null) {
             $fields[] = 'sinopsis = ?';
-            $params[] = $pelicula->sinopsis;
+            $params[] = $conferencia->sinopsis;
+        }
+        if ($conferencia->categoria !== null) {
+            $fields[] = 'categoria = ?';
+            $params[] = $conferencia->categoria;
         }                 
 
         if (!empty($fields)) 
         {
             $params[] = $id;
-            $stmt = $conn->prepare("UPDATE peliculas SET " . implode(', ', $fields) . " WHERE id = ?");
+            $stmt = $conn->prepare("UPDATE conferencias SET " . implode(', ', $fields) . " WHERE id = ?");
             $stmt->execute($params);
-            echo json_encode(['message' => 'Película actualizada con éxito']);
+            echo json_encode(['message' => 'Conferencia actualizada con éxito']);
         } 
         else 
         {
@@ -174,9 +175,9 @@ function handleDelete($conn)
 
     if ($id > 0) 
     {
-        $stmt = $conn->prepare("DELETE FROM peliculas WHERE id = ?");
+        $stmt = $conn->prepare("DELETE FROM conferencias WHERE id = ?");
         $stmt->execute([$id]);
-        echo json_encode(['message' => 'Película eliminada con éxito']);
+        echo json_encode(['message' => 'Conferencia eliminada con éxito']);
     } 
     else 
     {

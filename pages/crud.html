@@ -79,33 +79,33 @@
                   </div>
 
                   <div class="form-group">
-                      <label for="fecha_lanzamiento">Fecha Lanz.:</label>
-                      <input type="date" class="form-control" id="fecha_lanzamiento" name="fecha_lanzamiento" requerid >
+                      <label for="orador">Orador:</label>
+                      <input type="text" class="form-control" id="orador" name="orador" requerid >
                   </div>
 
                   <div class="form-group">
-                      <label for="genero">Genero:</label>
-                      <input type="text" class="form-control" id="genero" name="genero" requerid >
+                      <label for="fecha">Fecha:</label>
+                      <input type="date" class="form-control" id="fecha" name="fecha" requerid >
                   </div>
 
                   <div class="form-group">
-                      <label for="duracion">Duracion:</label>
-                      <input type="text" class="form-control" id="duracion" name="duracion" requerid >
+                      <label for="horario">Horario:</label>
+                      <input type="time" class="form-control" id="horario" name="horario" requerid >
                   </div>
 
                   <div class="form-group">
-                      <label for="director">Directo:</label>
-                      <input type="text" class="form-control" id="director" name="director" requerid >
-                  </div>
-
-                  <div class="form-group">
-                      <label for="reparto">Reparto:</label>
-                      <input type="text" class="form-control" id="reparto" name="reparto" requerid >
+                      <label for="ubicacion">Ubicacion:</label>
+                      <input type="text" class="form-control" id="ubicacion" name="ubicacion" requerid >
                   </div>
 
                   <div class="form-group">
                       <label for="sinopsis">Sinopsis:</label>
                       <input type="text" class="form-control" id="sinopsis" name="sinopsis" requerid >
+                  </div>
+
+                  <div class="form-group">
+                      <label for="categoria">Categoria:</label>
+                      <input type="text" class="form-control" id="categoria" name="categoria" requerid >
                   </div>
 
                   <div class="form-group">
@@ -120,22 +120,23 @@
           <!-- tabla -->
 
         <section class="sectionFormularioTabla">
-          <h2>Peliculas</h2>
+          <h2>Conferencia</h2>
           <table class="table table-striped">
               <thead>
                   <tr>
                       <th>ID</th>
                       <th>Titulo</th>
-                      <th>Fecha Lanz.</th>
-                      <th>Genero</th>
-                      <th>Duracion</th>
-                      <th>Director</th>
-                      <th>Reparto</th>
+                      <th>Orador</th>
+                      <th>Fecha</th>
+                      <th>Horario</th>
+                      <th>Ubiicacion</th>
+                      <th>Categoria</th>
                       <th>Sinopsis</th>                        
                       <th colspan="2">Accciones</th>
                   </tr>
                   <tbody id="itemsTableBody">
                           <!-- Lo vamos a generar con JS -->
+                           
                   </tbody>
               </thead>
           </table>
@@ -226,7 +227,7 @@
 
     <!-- SCRIPTS SECTION -->
     <!-- API -->
-    <script src="../api_heroes.js"></script>
+    <!-- <script src="../api_heroes.js"></script> -->
     <!-- JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -240,8 +241,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- APP SCRIPT -->
-    <script src="../index.js"></script>
-    <script src="../js/app.js"></script>
+    <!-- <script src="../index.js"></script> -->
+    <!-- <script src="../js/app.js"></script> -->
     <!-- END SCRIPTS SECTION -->
   </body>
 </html>
