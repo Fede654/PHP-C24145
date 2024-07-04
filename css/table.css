@@ -1,0 +1,28 @@
+.sectionFormulario
+{
+    color:white;
+    width: 60%; 
+    margin: auto;
+}
+.sectionFormularioTabla
+{
+    color:white;
+    width: 60%; 
+    margin: auto; 
+}
+
+th, td {
+    border: 1px solid #9f3647;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #9f3647; /* Fondo negro para resaltar el texto blanco */
+    color: white ; /* Texto en blanco */
+    text-align: center;
+}
+
+td {
+    color: white; /* Texto en blanco */
+    text-align: center;
+}
