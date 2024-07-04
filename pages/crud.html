@@ -22,12 +22,12 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <!-- BOX ICONS -->
     <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <!-- APP CSS -->
-    <link rel="stylesheet" href="../grid.css" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/grid.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body>
@@ -47,7 +47,7 @@
             <div class="menu-button"></div>
           </label>
           <ul class="nav-menu" id="nav-menu">
-            <li><a href="#">Agenda</a></li>
+            <li><a href="../pages/crud.html">Agenda</a></li>
             <li><a href="#">Sponsors</a></li>
             <li><a href="#">Contacto</a></li>
             <li>
@@ -63,84 +63,88 @@
 
     <!-- Contenedor principal del formulario -->
     <main class="mainRegistrarse">
-        <section class="form-container" data-aos="flip-left" data-aos-duration="1000"
-        >
-
+      <section class="form-container" data-aos="flip-left" data-aos-duration="1000">
         <h1>Carga de Charlas 2024</h1>
 
-         <!-- FORM DE CARGA DE CHARLAS -->
-          
-         <form id="itemForm" class="mb-4">
-                  <input type="hidden" id="id" name="id">
+        <!-- FORM DE CARGA DE CHARLAS -->
 
-                  <div class="form-group">
-                      <label for="titulo">Titulo:</label>
-                      <input type="text" class="form-control" id="titulo" name="titulo" requerid >
-                  </div>
+        <form id="itemForm" class="mb-4" method="POST" enctype="multipart/form-data">
+          <!-- <input type="hidden" id="id" name="id"> -->
+          <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" class="form-control" id="id" name="id" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="orador">Orador:</label>
-                      <input type="text" class="form-control" id="orador" name="orador" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="titulo">Titulo:</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="fecha">Fecha:</label>
-                      <input type="date" class="form-control" id="fecha" name="fecha" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="orador">Orador:</label>
+            <input type="text" class="form-control" id="orador" name="orador" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="horario">Horario:</label>
-                      <input type="time" class="form-control" id="horario" name="horario" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="ubicacion">Ubicacion:</label>
-                      <input type="text" class="form-control" id="ubicacion" name="ubicacion" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="horario">Horario:</label>
+            <input type="time" class="form-control" id="horario" name="horario" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="sinopsis">Sinopsis:</label>
-                      <input type="text" class="form-control" id="sinopsis" name="sinopsis" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" class="form-control" id="ubicacion" name="ubicacion" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="categoria">Categoria:</label>
-                      <input type="text" class="form-control" id="categoria" name="categoria" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="sinopsis">Sinopsis:</label>
+            <input type="text" class="form-control" id="sinopsis" name="sinopsis" required>
+          </div>
 
-                  <div class="form-group">
-                      <label for="imagen">Imagen:</label>
-                      <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen" requerid >
-                  </div>
+          <div class="form-group">
+            <label for="categoria">Categoria:</label>
+            <input type="text" class="form-control" id="categoria" name="categoria" required>
+          </div>
+
+          <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen">
+          </div>
+        
           <button type="submit" class="btn btn-primary">Guardar</button>
-         </form>
-        </section>
-          <!-- FIN FORM DE CARGA DE CHARLAS -->
+        
+        </form>
+      </section>
+      <!-- FIN FORM DE CARGA DE CHARLAS -->
 
-          <!-- tabla -->
+        <!-- tabla -->
 
-        <section class="sectionFormularioTabla">
-          <h2>Conferencia</h2>
-          <table class="table table-striped">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Titulo</th>
-                      <th>Orador</th>
-                      <th>Fecha</th>
-                      <th>Horario</th>
-                      <th>Ubiicacion</th>
-                      <th>Categoria</th>
-                      <th>Sinopsis</th>                        
-                      <th colspan="2">Accciones</th>
-                  </tr>
-                  <tbody id="itemsTableBody">
-                          <!-- Lo vamos a generar con JS -->
-                           
-                  </tbody>
-              </thead>
-          </table>
-        </section>
+      <section class="sectionFormularioTabla">
+        <h2>Conferencias</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Orador</th>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>Ubicacion</th>
+                    <th>Categoria</th>
+                    <th>Sinopsis</th>                        
+                    <th colspan="2">Acciones</th>
+                </tr>
+                <tbody id="itemsTableBody">
+                        <!-- Lo vamos a generar con JS -->
+                          
+                </tbody>
+            </thead>
+        </table>
+      </section>
     </main>
 
 
@@ -226,8 +230,6 @@
     <!-- END COPYRIGHT SECTION -->
 
     <!-- SCRIPTS SECTION -->
-    <!-- API -->
-    <!-- <script src="../api_heroes.js"></script> -->
     <!-- JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -241,8 +243,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- APP SCRIPT -->
-    <!-- <script src="../index.js"></script> -->
-    <!-- <script src="../js/app.js"></script> -->
+    <script src="../js/app_conferencias.js"></script>
     <!-- END SCRIPTS SECTION -->
   </body>
 </html>

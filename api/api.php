@@ -27,7 +27,9 @@ switch ($method) {
         break;
 }
 
-//este metodo me devuelve una conferencia o todas las conferencias
+//
+// Metodo que devuelve una conferencia o todas las conferencias
+//
 function handleGet($conn) 
 {
     $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -56,10 +58,12 @@ function handleGet($conn)
         $conferenciaObjs = array_map(fn($conferencia) => Conferencia::fromArray($conferencia)->toArray(), $conferencias);
         echo json_encode(['conferencias' => $conferenciaObjs]);
     }
+    // throw new Exception(json_encode($conferencias));
 }
 
-
-//este metodo es para ingresar conferencias
+//
+// Metodo para ingresar conferencias
+//
 function handlePost($conn) 
 {
     if ($conn === null) 
@@ -70,7 +74,7 @@ function handlePost($conn)
 
     $data = json_decode(file_get_contents('php://input'), true);
 
-    $requiredFields = ['titulo', 'fecha','orador' ];
+    $requiredFields = ['id', 'titulo','orador', 'fecha'];
     foreach ($requiredFields as $field) 
     {
         if (!isset($data[$field])) 
@@ -84,16 +88,16 @@ function handlePost($conn)
 
     try 
     {
-        $stmt = $conn->prepare("INSERT INTO conferencias (titulo, orador, fecha, horario, ubicacion, sinopsis, categoria) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO conferencias (id, titulo, orador, fecha, horario, ubicacion, categoria, sinopsis) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([
+            $conferencia->id,
             $conferencia->titulo,
             $conferencia->orador,
             $conferencia->fecha,
             $conferencia->horario,
             $conferencia->ubicacion,
-            $conferencia->sinopsis,
-            $conferencia->categoria
-           
+            $conferencia->categoria,
+            $conferencia->sinopsis
         ]);
 
         echo json_encode(['message' => 'Conferencia ingresada correctamente']);
@@ -104,8 +108,9 @@ function handlePost($conn)
     }
 }
 
-
-
+//
+// Metodo para modificar conferencias
+//
 function handlePut($conn) 
 {
     $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -120,6 +125,10 @@ function handlePut($conn)
         $fields = [];
         $params = [];
 
+        if ($conferencia->id !== null) {
+            $fields[] = 'id = ?';
+            $params[] = $conferencia->id;
+        }
         if ($conferencia->titulo !== null) {
             $fields[] = 'titulo = ?';
             $params[] = $conferencia->titulo;
@@ -140,14 +149,14 @@ function handlePut($conn)
             $fields[] = 'ubicacion = ?';
             $params[] = $conferencia->ubicacion;
         }
-        if ($conferencia->sinopsis !== null) {
-            $fields[] = 'sinopsis = ?';
-            $params[] = $conferencia->sinopsis;
-        }
         if ($conferencia->categoria !== null) {
             $fields[] = 'categoria = ?';
             $params[] = $conferencia->categoria;
         }                 
+        if ($conferencia->sinopsis !== null) {
+            $fields[] = 'sinopsis = ?';
+            $params[] = $conferencia->sinopsis;
+        }
 
         if (!empty($fields)) 
         {
@@ -167,8 +176,9 @@ function handlePut($conn)
     }
 }
 
-
-//metodo para borrar registros
+//
+// Metodo para borrar registros
+//
 function handleDelete($conn) 
 {
     $id = isset($_GET['id']) ? intval($_GET['id']) : 0;

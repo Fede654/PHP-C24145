@@ -28,7 +28,7 @@
     />
 
     <!-- Enlace al archivo CSS de estilos personalizados -->
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body class="bodyRegistrarse">
     <!-- Enlace al inicio de la página -->
@@ -101,7 +101,7 @@
             </div>
             <!-- Enlace de "Olvidaste tu contraseña?" -->
             <div class="custom-link-wrapper">
-              <a href="#" class="custom-link">¿Olvidaste tu contraseña?</a>
+              <a href="../index.html" class="custom-link">¿Olvidaste tu contraseña?</a>
             </div>
           </div>
 
@@ -184,34 +184,6 @@
         alert('El login se realizó con éxito.');
         window.location.href = "../index.html";
       });
-      // (function () {
-      //   "use strict";
-      //   window.addEventListener(
-      //     "load",
-      //     function () {
-      //       // Obtiene todos los formularios que necesitan validación de Bootstrap
-      //       var forms = document.getElementsByClassName("needs-validation");
-      //       // Itera sobre ellos y previene la presentación
-      //       var validation = Array.prototype.filter.call(
-      //         forms,
-      //         function (form) {
-      //           form.addEventListener(
-      //             "submit",
-      //             function (event) {
-      //               if (form.checkValidity() === false) {
-      //                 event.preventDefault();
-      //                 event.stopPropagation();
-      //               }
-      //               form.classList.add("was-validated");
-      //             },
-      //             false
-      //           );
-      //         }
-      //       );
-      //     },
-      //     false
-      //   );
-      // })();
     </script>
   </body>
 </html>

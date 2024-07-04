@@ -29,7 +29,7 @@
     />
 
     <!-- Enlace al archivo CSS de estilos personalizados -->
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body class="bodyRegistrarse">
     <!-- Enlace al inicio de la página -->
@@ -225,47 +225,6 @@
         alert('El Registro se realizó con éxito!!');
         window.location.href = "../index.html";
       });
-    // Script para validación de formulario
-    //   (function () {
-    //     "use strict";
-    //     window.addEventListener(
-    //       "load",
-    //       function () {
-    //         // Obtiene todos los formularios que necesitan validación de Bootstrap
-    //         var forms = document.getElementsByClassName("needs-validation");
-    //         // Convierte la colección de formularios en un array
-    //         var validation = Array.prototype.filter.call(
-    //           forms,
-    //           function (form) {
-    //             // Agrega un listener de evento para la validación al enviar el formulario
-    //             form.addEventListener(
-    //               "submit",
-    //               function (event) {
-    //                 // Obtiene el elemento de selección de país
-    //                 var paisSelect = form.querySelector("#inputPais");
-    //                 // Verifica si el país seleccionado es vacío
-    //                 if (paisSelect.value === "") {
-    //                   event.preventDefault(); // Detiene el envío del formulario
-    //                   event.stopPropagation(); // Detiene la propagación del evento
-    //                   paisSelect.classList.add("is-invalid"); // Agrega clase de "inválido" al elemento de selección de país
-    //                 } else {
-    //                   paisSelect.classList.remove("is-invalid"); // Remueve clase de "inválido" del elemento de selección de país
-    //                 }
-    //                 // Verifica si el formulario es válido
-    //                 if (form.checkValidity() === false) {
-    //                   event.preventDefault(); // Detiene el envío del formulario
-    //                   event.stopPropagation(); // Detiene la propagación del evento
-    //                 }
-    //                 form.classList.add("was-validated"); // Agrega clase de "validado" al formulario
-    //               },
-    //               false
-    //             );
-    //           }
-    //         );
-    //       },
-    //       false
-    //     );
-    //   })();
     </script>
   </body>
 </html>
