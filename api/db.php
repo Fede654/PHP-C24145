@@ -1,7 +1,7 @@
 <?php
 $servername="localhost";
 $username="root";
-$password="";
+$password="root";
 $dbname="eventearla";
 
 // Settings para 000webhost

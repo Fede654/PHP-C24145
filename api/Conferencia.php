@@ -10,7 +10,7 @@ class Conferencia
     public $sinopsis;
     public $categoria;
 
-    public function __construct($id,$titulo,$orador,$fecha,$horario=null,$ubicacion=null,$sinopsis=null,$categoria=null)
+    public function __construct($titulo,$orador,$fecha,$horario=null,$ubicacion=null,$sinopsis=null,$categoria=null,$id=null)
     {
       $this->id=$id;  
       $this->titulo=$titulo;  
@@ -22,7 +22,7 @@ class Conferencia
       $this->categoria=$categoria;  
     }
 
-    public static function fromArray($data)
+    public function fromArray($data)
     {
         return new self
         (
