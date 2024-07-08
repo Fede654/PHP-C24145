@@ -58,3 +58,36 @@ document.addEventListener('DOMContentLoaded',function()
     loadConferencias();
 
 });
+
+const conferencia_form = document.querySelector("#itemForm");
+
+async function sendData() {
+  // Associate the FormData object with the form element
+  const formData = new FormData(conferencia_form);
+  console.log(formData);
+   // Build the data object.
+  const json_data = {};
+  formData.forEach((value, key) => (json_data[key] = value));
+  console.log(json_data);
+  // Log the data.
+  try {
+    const response = await fetch("https://php-c24145-codoacodo.000webhostapp.com/api/api.php", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // Set the FormData instance as the request body
+      body: JSON.stringify(json_data),
+    });
+    console.log(await response.json());
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+// Take over form submission
+conferencia_form.addEventListener("submit", (event) => {
+  console.log("Submiting form trough sendData...");
+  event.preventDefault();
+  sendData();
+});

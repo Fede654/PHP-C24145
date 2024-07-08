@@ -26,3 +26,42 @@ td {
     color: white; /* Texto en blanco */
     text-align: center;
 }
+
+/* Botón Danger */
+.btn-danger {
+    background-color: #ed1c1c;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 90%; /* Ancho del 100% para ser responsive */
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px; /* Tamaño de fuente aumentado */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+
+  .btn-danger:hover {
+    background-color: #f6de23;
+  }
+
+  /* Botón Success */
+.btn-success {
+    background-color: #11a422;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 90%; /* Ancho del 100% para ser responsive */
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px; /* Tamaño de fuente aumentado */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+
+  .btn-success:hover {
+    background-color: #e7f5ea;
+  }
+  
