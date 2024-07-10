@@ -36,7 +36,7 @@ function handleGet($conn)
 
     if ($id > 0) 
     {
-        $stmt = $conn->prepare("SELECT * FROM conferencias WHERE id = ?");
+        $stmt = $conn->prepare("SELECT * FROM conferencias WHERE id = ? ORDER BY id ASC");
         $stmt->execute([$id]);
         $conferencia = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -53,7 +53,7 @@ function handleGet($conn)
     } 
     else 
     {
-        $stmt = $conn->query("SELECT * FROM conferencias");
+        $stmt = $conn->query("SELECT * FROM conferencias ORDER BY id ASC");
         $conferencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $conferenciaObjs = array_map(fn($conferencia) => Conferencia::fromArray($conferencia)->toArray(), $conferencias);
         echo json_encode(['conferencias' => $conferenciaObjs]);
@@ -74,7 +74,7 @@ function handlePost($conn)
 
     $data = json_decode(file_get_contents('php://input'), true);
 
-    $requiredFields = ['id', 'titulo','orador', 'fecha'];
+    $requiredFields = ['titulo','orador','fecha'];
     foreach ($requiredFields as $field) 
     {
         if (!isset($data[$field])) 
@@ -85,12 +85,16 @@ function handlePost($conn)
     }
 
     $conferencia = Conferencia::fromArray($data);
+    $stmt = $conn->query("SELECT MAX(id) as max FROM conferencias");
+    $new_id = $stmt->fetchAll(PDO::FETCH_ASSOC)[0]['max']+1;
+
 
     try 
     {
         $stmt = $conn->prepare("INSERT INTO conferencias (id, titulo, orador, fecha, horario, ubicacion, categoria, sinopsis) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([
-            $conferencia->id,
+            $new_id,
+        //    $conferencia->id,
             $conferencia->titulo,
             $conferencia->orador,
             $conferencia->fecha,

@@ -27,6 +27,45 @@ td {
     text-align: center;
 }
 
+
+  /* Botón Sinopsis */
+  .btn-sinopsis {
+    background-color: #0f1610;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 90%; /* Ancho del 100% para ser responsive */
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 14px; /* Tamaño de fuente aumentado */
+    transition: background-color 0.2s; /* Transición suave */
+  }
+
+  .btn-sinopsis:hover {
+    background-color: #78d678;
+  }
+
+/* Botón Danger */
+.btn-danger {
+    background-color: #ed1c1c;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 90%; /* Ancho del 100% para ser responsive */
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px; /* Tamaño de fuente aumentado */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+
+  .btn-danger:hover {
+    background-color: #f6de23;
+  }
+
 /* Botón Danger */
 .btn-danger {
     background-color: #ed1c1c;
